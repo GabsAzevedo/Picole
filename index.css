@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pop {
+  position: relative;
+  width: 150px;
+  height: 230px;
+
+  border: 3px solid black;
+  border-top-left-radius: 75px;
+  border-top-right-radius: 75px;
+
+  background: repeating-linear-gradient(
+    300deg,
+    #898989 0%,
+    #898989 10%,
+    blue 10%,
+    blue 20%,
+    red 20%,
+    red 30%,
+    yellow 30%,
+    yellow 40%,
+    purple 40%,
+    purple 50%
+  );
+  background-size: 10% 100%;
+  animation: pop-animado 2s linear infinite forwards;
+}
+
+@keyframes pop-animado {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.palito {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  margin-left: -23px;
+
+  width: 40px;
+  height: 80px;
+  border: 3px solid black;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #ffd038;
+}
